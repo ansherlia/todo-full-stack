@@ -1,13 +1,13 @@
-import HomePage from "@/components/templates/HomePage";
-import User from "@/models/User";
+import AddTodoPage from "@/components/templates/AddTodoPage";
 import { verifyToken } from "@/utils/auth";
 import connectDB from "@/utils/connectDB";
 
-function Index() {
-  return <HomePage />;
+function AddTodo() {
+  return <AddTodoPage />;
 }
 
-export default Index;
+export default AddTodo;
+
 export async function getServerSideProps({ req }) {
   await connectDB();
   const { token } = req.cookies;

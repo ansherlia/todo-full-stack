@@ -2,26 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer components {
+  .input__element {
+    @apply w-[100%] md:w-[350px] py-2 px-3 rounded-md text-lg focus:outline-none;
   }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .todo {
+    @apply flex justify-between rounded-md   font-semibold items-center gap-x-2 px-4 py-0.5 w-[200px] bg-yellow-500  text-white;
+  }
+  .inProgress {
+    @apply flex justify-between rounded-md font-semibold items-center gap-x-2 px-4 py-0.5 w-[200px] bg-green-500  text-white;
+  }
+  .review {
+    @apply flex justify-between rounded-md font-semibold items-center gap-x-2 px-4 py-0.5 w-[200px] bg-sky-500  text-white;
+  }
+  .done {
+    @apply flex justify-between rounded-md font-semibold items-center gap-x-2 px-4 py-0.5 w-[200px] bg-emerald-700  text-white;
   }
 }
